@@ -1,0 +1,210 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  text-align: center;
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.age{
+  border: 2px solid limegreen;
+  padding: 5px 5px;
+  margin: 0 0.3rem;
+  border-radius: 50%;
+  color: limegreen;
+  font-weight: 700;
+  text-align: center;
+}
+
+.age-not{
+  border: 2px solid red;
+  padding: 5px 5px;
+  margin: 0 0.3rem;
+  border-radius: 50%;
+  color: red;
+  font-weight: 700;
+  text-align: center;
+}
+
+input{
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+input[type = "submit"]{
+  background: #333;
+  color: #fff;
+  border: none;
+  transition: transform 0.4s ease-in;
+}
+
+input[type = "submit"]:hover{
+  background: #777;
+}
+
+input[type = "submit"]:active{
+  transform: scale(0.8);
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+li{
+  list-style-type: none;
+}
+
+.container{
+  margin-top: 10%;
+  max-width: 300px;
+  max-height: 500px;
+  padding: 3rem 2rem 0.5rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.56);
+  background: #fff;
+}
+
+/*===== Age Message ====*/
+.message{
+  border: 1px solid limegreen;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: none;
+}
+
+.message-not{
+  border: 1px solid crimson;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: none;
+  font-size: 0.8rem;
+}
+
+.copyright{
+  margin-top: 3rem;
+}
+
+/*======= Animation =======*/
+.loader{
+  text-align: center;
+  padding: 2rem 0.2rem;
+  font-size: 1rem;
+  position: relative;
+  vertical-align: middle;
+  display: none;
+}
+
+.loader>span{
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  animation: bounce 1s infinite both alternate ease;
+}
+
+.loader>span:nth-child(12),
+.loader>span:nth-child(13),
+.loader>span:nth-child(14){
+  animation:bounce 1s infinite both alternate ease,
+            col 2s 2.4s infinite;
+}
+
+/*====== Letters =======*/
+.loader span:nth-child(1){
+  animation-delay: 0.0s;
+}
+.loader span:nth-child(2){
+  animation-delay: 0.2s;
+}
+.loader span:nth-child(3){
+  animation-delay: 0.4s;
+}
+.loader span:nth-child(4){
+  animation-delay: 0.8s;
+}
+.loader span:nth-child(5){
+  animation-delay: 1s;
+}
+.loader span:nth-child(6){
+  animation-delay: 1.2s;
+}
+.loader span:nth-child(7){
+  animation-delay: 1.4s;
+}
+.loader span:nth-child(8){
+  animation-delay: 1.6s;
+}
+.loader span:nth-child(9){
+  animation-delay: 1.8s;
+}
+.loader span:nth-child(10){
+  animation-delay: 2s;
+}
+.loader span:nth-child(11){
+  animation-delay: 2.2s;
+}
+
+
+/*====== Circles =======*/
+.loader span:nth-child(12){
+  animation-delay: 2.4s;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: crimson;
+  position: absolute;
+  top: 46px;
+  right: 50px;
+}
+.loader span:nth-child(13){
+  animation-delay: 2.6s;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  top: 46px;
+  right: 44px;
+  background-color: crimson;
+}
+.loader span:nth-child(14){
+  animation-delay: 2.8s;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: crimson;
+  position: absolute;
+  top: 46px;
+  right: 38px;
+}
+
+@keyframes bounce{
+  from{
+    transform: translate3D(0, 0 , 0);
+  }
+  to{
+    transform: translate3D(0, -10px, 0);
+  }
+}
+
+@keyframes col{
+  to{
+    background-color: green;
+  }
+}

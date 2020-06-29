@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This simple web app helps you to calculate your age.">
+    <meta name="kewords" content="Calculate, Age">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculate Your Age </title>
+  </head>
+  <body>
+    <div class="container">
+        <h1> Know your Age :) </h1>
+        <p>Enter your birth details below to get your age.</p>
+        <form>
+          <div class="input-group">
+            <input type="date" id="birth" required>
+          </div>
+          <div class="input-group">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+        <p class = "message"> You are <span class="age"> </span> years old now.</p>
+        <p class = "message-not"> Sorry! You are <span class="age-not"> </span> born :(</p>
+
+        <div class="loader"> 
+          <span>C</span>
+          <span>a</span>
+          <span>l</span>
+          <span>c</span>
+          <span>u</span>
+          <span>l</span>
+          <span>a</span>
+          <span>t</span>
+          <span>i</span>
+          <span>n</span>
+          <span>g</span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+      <div class="copyright"> 
+        &copy; Copyright <span class="year"></span> |</br> 
+        Created by Ssemeere Ronald |<br> 
+        Twitter: <a href="https://twitter.com/sseroan"> @sseroan </a> 
+      </div>
+
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
